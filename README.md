@@ -1,4 +1,6 @@
-tp_java_2014_09
+Techno Park
+Java Programming Course
+autumn 2014
 ===============
 
-Code examples for course "Java development" in https://tech-mail.ru/
+Code examples for course "Java Programming" in https://tech-mail.ru/
