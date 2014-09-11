@@ -1,7 +1,7 @@
 {
-status: [200],
+status: 200,
 body: {
-email: [String|"${email}"],
-password: [String|"${password}"]
+email: "${email}",
+password: "${password}"
 }
 }

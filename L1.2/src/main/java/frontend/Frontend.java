@@ -17,14 +17,7 @@ public class Frontend extends HttpServlet {
 
     public void doGet(HttpServletRequest request,
                       HttpServletResponse response) throws ServletException, IOException {
-        String email = request.getParameter("email");
-        String password = request.getParameter("password");
-        response.setContentType("text/html;charset=utf-8");
-        response.setStatus(HttpServletResponse.SC_OK);
-        Map<String, Object> pageVariables = new HashMap<>();
-        pageVariables.put("email", email == null ? "" : email);
-        pageVariables.put("password", email == null ? "" : password);
-        response.getWriter().println(PageGenerator.getPage("testresponse.html", pageVariables));
+        response.setStatus(HttpServletResponse.SC_FORBIDDEN);
     }
 
     public void doPost(HttpServletRequest request,
@@ -36,7 +29,7 @@ public class Frontend extends HttpServlet {
 
         Map<String, Object> pageVariables = new HashMap<>();
         pageVariables.put("email", email == null ? "" : email);
-        pageVariables.put("password", email == null ? "" : password);
+        pageVariables.put("password", password == null ? "" : password);
 
         response.getWriter().println(PageGenerator.getPage("authresponse.txt", pageVariables));
     }
